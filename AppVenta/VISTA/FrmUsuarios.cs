@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AppVenta.Model;
+using AppVenta.MODEL;
 
 namespace AppVenta.VISTA
 {
@@ -23,12 +23,12 @@ namespace AppVenta.VISTA
 
         void cargardatos()
         {
-            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            using (sistema_ventasEntities2 db = new sistema_ventasEntities2())
             {
                 //var tb_Usuarios = db.tb_usuarios;
-                //foreach(var iterardatostbUsuario in tb_Usuarios)
+                //foreach (var iterardatostbUsuario in tb_Usuarios)
                 //{
-                //    dvgUsuarios.Rows.Add(iterardatostbUsuario.email, iterardatostbUsuario.contrasena);
+                //    dvgUsuarios.Rows.Add(iterardatostbUsuario.Email, iterardatostbUsuario.Contrasena);
                 //}
                 dvgUsuarios.DataSource = db.tb_usuarios.ToList();
             }
@@ -45,7 +45,7 @@ namespace AppVenta.VISTA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            using (sistema_ventasEntities2 db = new sistema_ventasEntities2())
             {
                 user.Email = txtUsuario.Text;
                 user.Contrasena = txtPass.Text;
@@ -58,7 +58,7 @@ namespace AppVenta.VISTA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            using (sistema_ventasEntities2 db = new sistema_ventasEntities2())
             {
                 string Id = dvgUsuarios.CurrentRow.Cells[0].Value.ToString();
 
@@ -72,11 +72,11 @@ namespace AppVenta.VISTA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            using (sistema_ventasEntities2 db = new sistema_ventasEntities2())
             {
                 string Id = dvgUsuarios.CurrentRow.Cells[0].Value.ToString();
                 int IdC = int.Parse(Id);
-                user = db.tb_usuarios.Where(VerificarId => VerificarId.Id == IdC).First();
+                user = db.tb_usuarios.Where(VerificarId => VerificarId.idUsuario == IdC).First();
                 user.Email = txtUsuario.Text;
                 user.Contrasena = txtPass.Text;
                 db.Entry(user).State = System.Data.Entity.EntityState.Modified;
@@ -95,5 +95,6 @@ namespace AppVenta.VISTA
             txtPass.Text = pass;
         }
 
+        
     }
 }

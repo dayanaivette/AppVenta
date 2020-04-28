@@ -12,12 +12,16 @@ namespace AppVenta.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class roles_usuario
+    public partial class detalleVenta
     {
-        public int id_Rol_Usuario { get; set; }
-        public int idUsuario { get; set; }
-        public string tipo_rol { get; set; }
+        public int idDetalleVenta { get; set; }
+        public int idVenta { get; set; }
+        public int idProducto { get; set; }
+        public Nullable<int> cantidad { get; set; }
+        public Nullable<decimal> precio { get; set; }
+        public Nullable<decimal> total { get; set; }
     
-        public virtual tb_usuarios tb_usuarios { get; set; }
+        public virtual producto producto { get; set; }
+        public virtual tb_venta tb_venta { get; set; }
     }
 }

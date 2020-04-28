@@ -4,10 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f7ca37dc910a49eb81f388a121fa72ac" Name="Diagram1">
-        <EntityTypeShape EntityType="sistema_ventasModel.roles_usuario" Width="1.5" PointX="3.875" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="sistema_ventasModel.tb_usuarios" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="sistema_ventasModel.FK__roles_usu__id_us__267ABA7A" ManuallyRouted="false" />
+      <Diagram DiagramId="67acb8b00f414952a5219676d07d69a4" Name="Diagram1">
+        <EntityTypeShape EntityType="sistema_ventasModel.detalleVenta" Width="1.5" PointX="9.625" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistema_ventasModel.producto" Width="1.5" PointX="9.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistema_ventasModel.roles_usuario" Width="1.5" PointX="1.625" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistema_ventasModel.tb_cliente" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistema_ventasModel.tb_documento" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistema_ventasModel.tb_usuarios" Width="1.5" PointX="4.375" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sistema_ventasModel.tb_venta" Width="1.5" PointX="6.625" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="sistema_ventasModel.FK__detalleVe__idPro__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="sistema_ventasModel.FK__detalleVe__idVen__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="sistema_ventasModel.FK__roles_usu__idUsu__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="sistema_ventasModel.FK__tb_venta__idClie__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="sistema_ventasModel.FK__tb_venta__idDocu__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="sistema_ventasModel.FK__tb_venta__idUsua__4316F928" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

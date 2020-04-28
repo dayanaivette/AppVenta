@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppVenta.Model
+namespace AppVenta.MODEL
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class sistema_ventasEntities1 : DbContext
+    public partial class sistema_ventasEntities2 : DbContext
     {
-        public sistema_ventasEntities1()
-            : base("name=sistema_ventasEntities1")
+        public sistema_ventasEntities2()
+            : base("name=sistema_ventasEntities2")
         {
         }
     
@@ -25,7 +25,12 @@ namespace AppVenta.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<detalleVenta> detalleVenta { get; set; }
+        public virtual DbSet<producto> producto { get; set; }
         public virtual DbSet<roles_usuario> roles_usuario { get; set; }
+        public virtual DbSet<tb_cliente> tb_cliente { get; set; }
+        public virtual DbSet<tb_documento> tb_documento { get; set; }
         public virtual DbSet<tb_usuarios> tb_usuarios { get; set; }
+        public virtual DbSet<tb_venta> tb_venta { get; set; }
     }
 }

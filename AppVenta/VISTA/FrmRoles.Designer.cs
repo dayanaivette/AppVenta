@@ -34,17 +34,20 @@
             // 
             // dtVistaRoles
             // 
+            this.dtVistaRoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtVistaRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtVistaRoles.Location = new System.Drawing.Point(49, 70);
+            this.dtVistaRoles.Location = new System.Drawing.Point(12, 94);
             this.dtVistaRoles.Name = "dtVistaRoles";
-            this.dtVistaRoles.Size = new System.Drawing.Size(642, 224);
+            this.dtVistaRoles.Size = new System.Drawing.Size(701, 224);
             this.dtVistaRoles.TabIndex = 0;
+            this.dtVistaRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtVistaRoles_CellContentClick);
             // 
             // FrmRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 326);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(725, 330);
             this.Controls.Add(this.dtVistaRoles);
             this.Name = "FrmRoles";
             this.Text = "Roles";

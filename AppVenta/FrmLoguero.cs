@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AppVenta.Model;
+using AppVenta.MODEL;
 using AppVenta.VISTA;
 
 namespace AppVenta
@@ -21,7 +21,7 @@ namespace AppVenta
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities1 db = new sistema_ventasEntities1())
+            using (sistema_ventasEntities2 db = new sistema_ventasEntities2())
             {
                 var lista = from usuario in db.tb_usuarios
                             where usuario.Email == txtUsuario.Text
@@ -39,6 +39,11 @@ namespace AppVenta
                     MessageBox.Show("El Usuario no existe"); 
                 }
             }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AppVenta.Model;
+using AppVenta.MODEL;
 
 namespace AppVenta.VISTA
 {
@@ -20,16 +20,16 @@ namespace AppVenta.VISTA
 
         private void FrmRoles_Load(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities1 bd = new sistema_ventasEntities1())
+            using (sistema_ventasEntities2 bd = new sistema_ventasEntities2())
             {
 
                 var JoinTablas = from tbusua in bd.tb_usuarios
                                  from rolesusuarios in bd.roles_usuario
-                                 where tbusua.Id == rolesusuarios.id_usuario
+                                 where tbusua.idUsuario == rolesusuarios.idUsuario
 
                 select new
                                  {
-                                     Id = tbusua.Id,
+                                     Id = tbusua.idUsuario,
                                      Email = tbusua.Email,
                                      TipoRol = rolesusuarios.tipo_rol
 
@@ -38,6 +38,11 @@ namespace AppVenta.VISTA
                 dtVistaRoles.DataSource = JoinTablas.ToList();
 
             }
+        }
+
+        private void dtVistaRoles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

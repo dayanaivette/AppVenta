@@ -28,5 +28,13 @@ namespace AppVenta.VISTA
             FrmUsuarios Usu = new FrmUsuarios();
             Usu.Show();
         }
+
+        public static FrmVentas venta = new FrmVentas();
+
+        private void venderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            venta.Show();
+        }
     }
 }

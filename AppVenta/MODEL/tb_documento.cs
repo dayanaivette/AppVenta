@@ -12,21 +12,17 @@ namespace AppVenta.MODEL
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_usuarios
+    public partial class tb_documento
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_usuarios()
+        public tb_documento()
         {
-            this.roles_usuario = new HashSet<roles_usuario>();
             this.tb_venta = new HashSet<tb_venta>();
         }
     
-        public int idUsuario { get; set; }
-        public string Email { get; set; }
-        public string Contrasena { get; set; }
+        public int idDocumento { get; set; }
+        public string nombreDocumento { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<roles_usuario> roles_usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_venta> tb_venta { get; set; }
     }
