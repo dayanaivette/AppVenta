@@ -45,6 +45,11 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dtvVentas = new System.Windows.Forms.DataGridView();
+            this.CÓDIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBREPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIOPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANTIDADPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodProd = new System.Windows.Forms.TextBox();
             this.txtNomProd = new System.Windows.Forms.TextBox();
             this.txtPrecProd = new System.Windows.Forms.TextBox();
@@ -52,12 +57,9 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotalFinal = new System.Windows.Forms.Label();
             this.txtTotalFinal = new System.Windows.Forms.TextBox();
-            this.CÓDIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBREPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIOPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANTIDADPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnGuardarV = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +88,7 @@
             // 
             this.lblTipDoc.AutoSize = true;
             this.lblTipDoc.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipDoc.Location = new System.Drawing.Point(343, 47);
+            this.lblTipDoc.Location = new System.Drawing.Point(343, 69);
             this.lblTipDoc.Name = "lblTipDoc";
             this.lblTipDoc.Size = new System.Drawing.Size(124, 17);
             this.lblTipDoc.TabIndex = 2;
@@ -135,7 +137,7 @@
             // 
             this.cmbTipDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTipDoc.FormattingEnabled = true;
-            this.cmbTipDoc.Location = new System.Drawing.Point(473, 47);
+            this.cmbTipDoc.Location = new System.Drawing.Point(473, 69);
             this.cmbTipDoc.Name = "cmbTipDoc";
             this.cmbTipDoc.Size = new System.Drawing.Size(156, 21);
             this.cmbTipDoc.TabIndex = 7;
@@ -235,6 +237,36 @@
             this.dtvVentas.Size = new System.Drawing.Size(785, 184);
             this.dtvVentas.TabIndex = 15;
             // 
+            // CÓDIGO
+            // 
+            this.CÓDIGO.HeaderText = "CÓDIGO";
+            this.CÓDIGO.Name = "CÓDIGO";
+            this.CÓDIGO.ReadOnly = true;
+            // 
+            // NOMBREPROD
+            // 
+            this.NOMBREPROD.HeaderText = "NOMBRE PRODUCTO";
+            this.NOMBREPROD.Name = "NOMBREPROD";
+            this.NOMBREPROD.ReadOnly = true;
+            // 
+            // PRECIOPROD
+            // 
+            this.PRECIOPROD.HeaderText = "PRECIO PRODUCTO";
+            this.PRECIOPROD.Name = "PRECIOPROD";
+            this.PRECIOPROD.ReadOnly = true;
+            // 
+            // CANTIDADPROD
+            // 
+            this.CANTIDADPROD.HeaderText = "CANTIDAD";
+            this.CANTIDADPROD.Name = "CANTIDADPROD";
+            this.CANTIDADPROD.ReadOnly = true;
+            // 
+            // TOTAL
+            // 
+            this.TOTAL.HeaderText = "TOTAL";
+            this.TOTAL.Name = "TOTAL";
+            this.TOTAL.ReadOnly = true;
+            // 
             // txtCodProd
             // 
             this.txtCodProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -290,7 +322,7 @@
             // 
             this.lblTotalFinal.AutoSize = true;
             this.lblTotalFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFinal.Location = new System.Drawing.Point(517, 493);
+            this.lblTotalFinal.Location = new System.Drawing.Point(272, 547);
             this.lblTotalFinal.Name = "lblTotalFinal";
             this.lblTotalFinal.Size = new System.Drawing.Size(104, 25);
             this.lblTotalFinal.TabIndex = 21;
@@ -300,36 +332,11 @@
             // 
             this.txtTotalFinal.Enabled = false;
             this.txtTotalFinal.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalFinal.Location = new System.Drawing.Point(627, 485);
+            this.txtTotalFinal.Location = new System.Drawing.Point(382, 538);
             this.txtTotalFinal.Multiline = true;
             this.txtTotalFinal.Name = "txtTotalFinal";
-            this.txtTotalFinal.Size = new System.Drawing.Size(100, 33);
+            this.txtTotalFinal.Size = new System.Drawing.Size(100, 43);
             this.txtTotalFinal.TabIndex = 22;
-            // 
-            // CÓDIGO
-            // 
-            this.CÓDIGO.HeaderText = "CÓDIGO";
-            this.CÓDIGO.Name = "CÓDIGO";
-            // 
-            // NOMBREPROD
-            // 
-            this.NOMBREPROD.HeaderText = "NOMBRE PRODUCTO";
-            this.NOMBREPROD.Name = "NOMBREPROD";
-            // 
-            // PRECIOPROD
-            // 
-            this.PRECIOPROD.HeaderText = "PRECIO PRODUCTO";
-            this.PRECIOPROD.Name = "PRECIOPROD";
-            // 
-            // CANTIDADPROD
-            // 
-            this.CANTIDADPROD.HeaderText = "CANTIDAD";
-            this.CANTIDADPROD.Name = "CANTIDADPROD";
-            // 
-            // TOTAL
-            // 
-            this.TOTAL.HeaderText = "TOTAL";
-            this.TOTAL.Name = "TOTAL";
             // 
             // pictureBox1
             // 
@@ -341,13 +348,39 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // btnGuardarV
+            // 
+            this.btnGuardarV.BackColor = System.Drawing.Color.Khaki;
+            this.btnGuardarV.FlatAppearance.BorderSize = 0;
+            this.btnGuardarV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarV.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarV.Location = new System.Drawing.Point(644, 504);
+            this.btnGuardarV.Name = "btnGuardarV";
+            this.btnGuardarV.Size = new System.Drawing.Size(75, 34);
+            this.btnGuardarV.TabIndex = 24;
+            this.btnGuardarV.Text = "Guardar Venta";
+            this.btnGuardarV.UseVisualStyleBackColor = false;
+            this.btnGuardarV.Click += new System.EventHandler(this.btnGuardarV_Click);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "yyyy-MM-dd";
+            this.dtpFecha.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(369, 25);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(227, 22);
+            this.dtpFecha.TabIndex = 25;
+            this.dtpFecha.Value = new System.DateTime(2020, 4, 30, 17, 20, 32, 0);
+            // 
             // FrmVentas
             // 
             this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(829, 540);
+            this.ClientSize = new System.Drawing.Size(829, 603);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.btnGuardarV);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtTotalFinal);
             this.Controls.Add(this.lblTotalFinal);
@@ -413,5 +446,7 @@
         private System.Windows.Forms.TextBox txtTotalFinal;
         public System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnGuardarV;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

@@ -31,10 +31,13 @@ namespace AppVenta.VISTA
             {
 
                 var tb_v = db.tb_venta;
-
+                txtNumVenta.Text = "1";
                 foreach (var iterardatostbventa in tb_v)
                 {
-                    txtNumVenta.Text = iterardatostbventa.idVenta.ToString();
+                    int idVenta = iterardatostbventa.idVenta;
+                    int suma = idVenta + 1;
+                    txtNumVenta.Text = suma.ToString();
+
 
                 }
             }
@@ -77,6 +80,17 @@ namespace AppVenta.VISTA
             
             }
             dtvVentas.Rows.Add(txtCodProd.Text, txtNomProd.Text, txtPrecProd.Text, txtCantidad.Text, txtTotal.Text);
+
+            Double suma = 0;
+            for (int i = 0; i < dtvVentas.RowCount; i++)
+            {
+                String datosOperar = dtvVentas.Rows[i].Cells[4].Value.ToString();
+                Double datosConvertidos = Convert.ToDouble(datosOperar);
+            
+                //suma = suma + datosConvertidos;
+                suma += datosConvertidos;
+                txtTotalFinal.Text = suma.ToString();
+            }
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
@@ -104,8 +118,40 @@ namespace AppVenta.VISTA
             {
                 txtCantidad.Text = "0";
                 MessageBox.Show("No puedes operar datos menores de 0");
-
                 txtCantidad.Select();
+            }
+        }
+
+        private void btnGuardarV_Click(object sender, EventArgs e)
+        {
+            using (sistema_ventasEntities2 db = new sistema_ventasEntities2())
+            {
+                tb_venta tb_v = new tb_venta();
+                String comboTipDoc = cmbTipDoc.SelectedValue.ToString();
+                tb_v.idDocumento = Convert.ToInt32(comboTipDoc);
+
+                String comboCliente = cmbCliente.SelectedValue.ToString();
+                tb_v.idCliente = Convert.ToInt32(comboCliente);
+
+                tb_v.idUsuario = 1;
+                tb_v.totalVenta = Convert.ToDecimal(txtTotalFinal.Text);
+                tb_v.fecha = Convert.ToDateTime(dtpFecha.Text);
+
+                db.tb_venta.Add(tb_v);
+                db.SaveChanges();
+
+                detalleVenta detalle = new detalleVenta();
+                for (int i = 0; i < dtvVentas.RowCount; i++)
+                {
+                    String idProducto = dtvVentas.Rows[i].Cells[0].Value.ToString();
+                    int idProductoConvertidos = Convert.ToInt32(idProducto);
+
+                    detalle.idVenta = Convert.ToInt32(txtNumVenta.Text);
+                    detalle.idProducto = idProductoConvertidos;
+
+                    db.detalleVenta.Add(detalle);
+                    db.SaveChanges();
+                }
             }
         }
     }
