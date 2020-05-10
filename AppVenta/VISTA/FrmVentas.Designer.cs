@@ -37,7 +37,7 @@
             this.txtNumVenta = new System.Windows.Forms.TextBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.cmbTipDoc = new System.Windows.Forms.ComboBox();
-            this.txtBusProducto = new System.Windows.Forms.TextBox();
+            this.txtBusBarraProducto = new System.Windows.Forms.TextBox();
             this.btnBuscarV = new System.Windows.Forms.Button();
             this.lblNomProd = new System.Windows.Forms.Label();
             this.lblPrecProd = new System.Windows.Forms.Label();
@@ -142,14 +142,15 @@
             this.cmbTipDoc.Size = new System.Drawing.Size(156, 21);
             this.cmbTipDoc.TabIndex = 7;
             // 
-            // txtBusProducto
+            // txtBusBarraProducto
             // 
-            this.txtBusProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBusProducto.Location = new System.Drawing.Point(140, 113);
-            this.txtBusProducto.Multiline = true;
-            this.txtBusProducto.Name = "txtBusProducto";
-            this.txtBusProducto.Size = new System.Drawing.Size(387, 23);
-            this.txtBusProducto.TabIndex = 8;
+            this.txtBusBarraProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBusBarraProducto.Location = new System.Drawing.Point(140, 113);
+            this.txtBusBarraProducto.Multiline = true;
+            this.txtBusBarraProducto.Name = "txtBusBarraProducto";
+            this.txtBusBarraProducto.Size = new System.Drawing.Size(387, 23);
+            this.txtBusBarraProducto.TabIndex = 8;
+            this.txtBusBarraProducto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBusBarraProducto_KeyUp);
             // 
             // btnBuscarV
             // 
@@ -307,6 +308,7 @@
             this.txtCantidad.TabIndex = 19;
             this.txtCantidad.Text = "1";
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyUp);
             // 
             // txtTotal
             // 
@@ -374,7 +376,6 @@
             // 
             // FrmVentas
             // 
-            this.AcceptButton = this.btnAgregar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -396,7 +397,7 @@
             this.Controls.Add(this.lblPrecProd);
             this.Controls.Add(this.lblNomProd);
             this.Controls.Add(this.btnBuscarV);
-            this.Controls.Add(this.txtBusProducto);
+            this.Controls.Add(this.txtBusBarraProducto);
             this.Controls.Add(this.cmbTipDoc);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.txtNumVenta);
@@ -425,7 +426,7 @@
         private System.Windows.Forms.TextBox txtNumVenta;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.ComboBox cmbTipDoc;
-        private System.Windows.Forms.TextBox txtBusProducto;
+        private System.Windows.Forms.TextBox txtBusBarraProducto;
         private System.Windows.Forms.Button btnBuscarV;
         private System.Windows.Forms.Label lblNomProd;
         private System.Windows.Forms.Label lblPrecProd;
