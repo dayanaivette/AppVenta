@@ -165,6 +165,9 @@ namespace AppVenta.VISTA
                     db.SaveChanges();
                 }
             }
+            retornoId();
+            dtvVentas.Rows.Clear();
+            txtTotalFinal.Text = "";
         }
 
         private void txtBusBarraProducto_KeyUp(object sender, KeyEventArgs e)
@@ -190,11 +193,12 @@ namespace AppVenta.VISTA
 
                     txtCantidad.Focus();
                     txtBusBarraProducto.Text = "";
+                    intentos = 2;
+
                 }
             }
 
         }
-
         int intentos = 1;
 
         private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
@@ -217,5 +221,11 @@ namespace AppVenta.VISTA
                 intentos += 1;
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
     }
 }

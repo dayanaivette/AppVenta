@@ -60,6 +60,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardarV = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnEliminarGrid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +70,7 @@
             // 
             this.lblNumVenta.AutoSize = true;
             this.lblNumVenta.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumVenta.Location = new System.Drawing.Point(22, 28);
+            this.lblNumVenta.Location = new System.Drawing.Point(22, 58);
             this.lblNumVenta.Name = "lblNumVenta";
             this.lblNumVenta.Size = new System.Drawing.Size(112, 17);
             this.lblNumVenta.TabIndex = 0;
@@ -78,7 +80,7 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(22, 65);
+            this.lblCliente.Location = new System.Drawing.Point(26, 109);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(47, 17);
             this.lblCliente.TabIndex = 1;
@@ -88,7 +90,7 @@
             // 
             this.lblTipDoc.AutoSize = true;
             this.lblTipDoc.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipDoc.Location = new System.Drawing.Point(343, 69);
+            this.lblTipDoc.Location = new System.Drawing.Point(343, 109);
             this.lblTipDoc.Name = "lblTipDoc";
             this.lblTipDoc.Size = new System.Drawing.Size(124, 17);
             this.lblTipDoc.TabIndex = 2;
@@ -98,7 +100,7 @@
             // 
             this.lblBusProducto.AutoSize = true;
             this.lblBusProducto.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusProducto.Location = new System.Drawing.Point(22, 119);
+            this.lblBusProducto.Location = new System.Drawing.Point(26, 156);
             this.lblBusProducto.Name = "lblBusProducto";
             this.lblBusProducto.Size = new System.Drawing.Size(103, 17);
             this.lblBusProducto.TabIndex = 3;
@@ -118,7 +120,7 @@
             // 
             this.txtNumVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumVenta.Enabled = false;
-            this.txtNumVenta.Location = new System.Drawing.Point(140, 28);
+            this.txtNumVenta.Location = new System.Drawing.Point(140, 58);
             this.txtNumVenta.Multiline = true;
             this.txtNumVenta.Name = "txtNumVenta";
             this.txtNumVenta.Size = new System.Drawing.Size(164, 20);
@@ -128,7 +130,7 @@
             // 
             this.cmbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(140, 65);
+            this.cmbCliente.Location = new System.Drawing.Point(140, 105);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(164, 21);
             this.cmbCliente.TabIndex = 6;
@@ -137,7 +139,7 @@
             // 
             this.cmbTipDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTipDoc.FormattingEnabled = true;
-            this.cmbTipDoc.Location = new System.Drawing.Point(473, 69);
+            this.cmbTipDoc.Location = new System.Drawing.Point(473, 105);
             this.cmbTipDoc.Name = "cmbTipDoc";
             this.cmbTipDoc.Size = new System.Drawing.Size(156, 21);
             this.cmbTipDoc.TabIndex = 7;
@@ -145,7 +147,7 @@
             // txtBusBarraProducto
             // 
             this.txtBusBarraProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBusBarraProducto.Location = new System.Drawing.Point(140, 113);
+            this.txtBusBarraProducto.Location = new System.Drawing.Point(140, 150);
             this.txtBusBarraProducto.Multiline = true;
             this.txtBusBarraProducto.Name = "txtBusBarraProducto";
             this.txtBusBarraProducto.Size = new System.Drawing.Size(387, 23);
@@ -159,7 +161,7 @@
             this.btnBuscarV.FlatAppearance.BorderSize = 0;
             this.btnBuscarV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarV.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarV.Location = new System.Drawing.Point(554, 113);
+            this.btnBuscarV.Location = new System.Drawing.Point(554, 150);
             this.btnBuscarV.Name = "btnBuscarV";
             this.btnBuscarV.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarV.TabIndex = 9;
@@ -201,7 +203,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(699, 192);
+            this.lblTotal.Location = new System.Drawing.Point(339, 239);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(37, 17);
             this.lblTotal.TabIndex = 13;
@@ -213,7 +215,7 @@
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(380, 253);
+            this.btnAgregar.Location = new System.Drawing.Point(473, 252);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(87, 26);
             this.btnAgregar.TabIndex = 14;
@@ -314,7 +316,7 @@
             // 
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(656, 213);
+            this.txtTotal.Location = new System.Drawing.Point(287, 259);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(127, 20);
@@ -324,7 +326,7 @@
             // 
             this.lblTotalFinal.AutoSize = true;
             this.lblTotalFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFinal.Location = new System.Drawing.Point(272, 547);
+            this.lblTotalFinal.Location = new System.Drawing.Point(272, 513);
             this.lblTotalFinal.Name = "lblTotalFinal";
             this.lblTotalFinal.Size = new System.Drawing.Size(104, 25);
             this.lblTotalFinal.TabIndex = 21;
@@ -334,7 +336,7 @@
             // 
             this.txtTotalFinal.Enabled = false;
             this.txtTotalFinal.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalFinal.Location = new System.Drawing.Point(382, 538);
+            this.txtTotalFinal.Location = new System.Drawing.Point(382, 506);
             this.txtTotalFinal.Multiline = true;
             this.txtTotalFinal.Name = "txtTotalFinal";
             this.txtTotalFinal.Size = new System.Drawing.Size(100, 43);
@@ -343,7 +345,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(656, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(656, 58);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 151);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -356,7 +358,7 @@
             this.btnGuardarV.FlatAppearance.BorderSize = 0;
             this.btnGuardarV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarV.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarV.Location = new System.Drawing.Point(644, 504);
+            this.btnGuardarV.Location = new System.Drawing.Point(656, 504);
             this.btnGuardarV.Name = "btnGuardarV";
             this.btnGuardarV.Size = new System.Drawing.Size(75, 34);
             this.btnGuardarV.TabIndex = 24;
@@ -368,18 +370,48 @@
             // 
             this.dtpFecha.CustomFormat = "yyyy-MM-dd";
             this.dtpFecha.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(369, 25);
+            this.dtpFecha.Location = new System.Drawing.Point(369, 58);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(227, 22);
             this.dtpFecha.TabIndex = 25;
             this.dtpFecha.Value = new System.DateTime(2020, 4, 30, 17, 20, 32, 0);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Khaki;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(761, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(65, 33);
+            this.btnCerrar.TabIndex = 26;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnEliminarGrid
+            // 
+            this.btnEliminarGrid.BackColor = System.Drawing.Color.Khaki;
+            this.btnEliminarGrid.FlatAppearance.BorderSize = 0;
+            this.btnEliminarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarGrid.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarGrid.Location = new System.Drawing.Point(707, 223);
+            this.btnEliminarGrid.Name = "btnEliminarGrid";
+            this.btnEliminarGrid.Size = new System.Drawing.Size(71, 42);
+            this.btnEliminarGrid.TabIndex = 27;
+            this.btnEliminarGrid.Text = "Eliminar \r\nDataGrid";
+            this.btnEliminarGrid.UseVisualStyleBackColor = false;
             // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(829, 603);
+            this.ClientSize = new System.Drawing.Size(829, 564);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnEliminarGrid);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.btnGuardarV);
             this.Controls.Add(this.pictureBox1);
@@ -449,5 +481,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnGuardarV;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnEliminarGrid;
     }
 }
