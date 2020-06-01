@@ -61,7 +61,7 @@
             this.btnGuardarV = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnEliminarGrid = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -239,6 +239,7 @@
             this.dtvVentas.ReadOnly = true;
             this.dtvVentas.Size = new System.Drawing.Size(785, 184);
             this.dtvVentas.TabIndex = 15;
+            this.dtvVentas.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dtvVentas_RowsRemoved);
             // 
             // CÓDIGO
             // 
@@ -390,18 +391,19 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnEliminarGrid
+            // btnBorrar
             // 
-            this.btnEliminarGrid.BackColor = System.Drawing.Color.Khaki;
-            this.btnEliminarGrid.FlatAppearance.BorderSize = 0;
-            this.btnEliminarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarGrid.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarGrid.Location = new System.Drawing.Point(707, 223);
-            this.btnEliminarGrid.Name = "btnEliminarGrid";
-            this.btnEliminarGrid.Size = new System.Drawing.Size(71, 42);
-            this.btnEliminarGrid.TabIndex = 27;
-            this.btnEliminarGrid.Text = "Eliminar \r\nDataGrid";
-            this.btnEliminarGrid.UseVisualStyleBackColor = false;
+            this.btnBorrar.BackColor = System.Drawing.Color.Khaki;
+            this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(596, 253);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(87, 26);
+            this.btnBorrar.TabIndex = 28;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // FrmVentas
             // 
@@ -410,7 +412,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(829, 564);
             this.ControlBox = false;
-            this.Controls.Add(this.btnEliminarGrid);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.btnGuardarV);
@@ -482,6 +484,6 @@
         private System.Windows.Forms.Button btnGuardarV;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnEliminarGrid;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }

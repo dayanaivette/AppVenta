@@ -75,22 +75,20 @@ namespace AppVenta.VISTA
             {
                 calculo();
             }
-            catch(Exception ex)
-            { 
-            
+            catch (Exception ex)
+            {
+
             }
             dtvVentas.Rows.Add(txtCodProd.Text, txtNomProd.Text, txtPrecProd.Text, txtCantidad.Text, txtTotal.Text);
+            calculartotalfinal();
 
-            Double suma = 0;
-            for (int i = 0; i < dtvVentas.RowCount; i++)
-            {
-                String datosOperar = dtvVentas.Rows[i].Cells[4].Value.ToString();
-                Double datosConvertidos = Convert.ToDouble(datosOperar);
-            
-                //suma = suma + datosConvertidos;
-                suma += datosConvertidos;
-                txtTotalFinal.Text = suma.ToString();
-            }
+
+            //dtvVentas.Refresh();
+            dtvVentas.ClearSelection();
+            int ObtenerUltimaFila = dtvVentas.Rows.Count - 1;
+            dtvVentas.FirstDisplayedScrollingRowIndex = ObtenerUltimaFila;
+            dtvVentas.Rows[ObtenerUltimaFila].Selected = true;
+
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
@@ -118,6 +116,20 @@ namespace AppVenta.VISTA
             {
                 txtCantidad.Text = "1";
                 txtCantidad.Select();
+            }
+        }
+
+        void calculartotalfinal()
+        {
+            Double suma = 0;
+            for (int i = 0; i < dtvVentas.RowCount; i++)
+            {
+                String datosOperar = dtvVentas.Rows[i].Cells[4].Value.ToString();
+                Double datosConvertidos = Convert.ToDouble(datosOperar);
+
+                //suma = suma + datosConvertidos;
+                suma += datosConvertidos;
+                txtTotalFinal.Text = suma.ToString();
             }
         }
 
@@ -227,5 +239,16 @@ namespace AppVenta.VISTA
             this.Hide();
         }
 
+        private void dtvVentas_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            calculartotalfinal();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            dtvVentas.Rows.Remove(dtvVentas.CurrentRow);
+        }
+
+       
     }
 }
